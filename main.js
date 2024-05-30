@@ -9,31 +9,6 @@ app.use(express.json())
 app.use(cors())
 
 
-const path = require('path');
-
-// Serve static files from the 'client' directory
-app.use(express.static(path.join(__dirname, '../client')));
-
-// Route for API endpoints
-app.use('/api', (req, res) => {
-    // Your API logic here
-    res.json({ message: 'API response' });
-});
-
-// Catch-all route to serve the index.html file for any other requests
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/index.html'));
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
-
-
-
-
-
 //database
 const db = require('./conn/conn.js')
 
