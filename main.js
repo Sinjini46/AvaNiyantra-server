@@ -10,15 +10,15 @@ app.use(cors())
 
 
 //database
-const db = require('./conn/conn')
+const db = require('./conn/conn.js')
 
 //routes
 const dic = require('./routes/dic.js')
-const auth_users = require('./routes/users')
-const medicine = require('./routes/medicine')
-const parcel = require('./routes/parcel')
-const batch = require('./routes/batch')
-const pharma = require('./routes/pharma')
+const auth_users = require('./routes/users.js')
+const medicine = require('./routes/medicine.js')
+const parcel = require('./routes/parcel.js')
+const batch = require('./routes/batch.js')
+const pharma = require('./routes/pharma.js')
 
 app.use(function(req, res, next) {
     // Website you wish to allow to connect
